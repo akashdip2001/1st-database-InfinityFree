@@ -402,3 +402,23 @@ input[type="submit"]:hover {
     background-color: #45a049;
 }
 ```
+
+# create_database.sql
+
+```sql
+-- create_database.sql
+
+CREATE DATABASE IF NOT EXISTS verification_app;
+USE verification_app;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    college VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    mobile VARCHAR(15) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    otp INT,
+    verified INT DEFAULT 0
+);
+```
